@@ -1,4 +1,5 @@
 import './style.css'
+import ProTypes from 'prop-types'
 function List(props) {
     return(
         <div className='card'>
@@ -16,3 +17,10 @@ function List(props) {
     )
 }
 export default List
+
+List.prototype = {
+  img: ProTypes.string.isRequired,
+  title: ProTypes.string,
+  artists: ProTypes.string,
+  remaintime: ProTypes.string
+}
